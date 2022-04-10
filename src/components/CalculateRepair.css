@@ -129,6 +129,7 @@
     border: solid 3px grey;
     border-radius: 10px;
 }
+
 #input {
     transform: translate(0px, 5px);
     width: 100px;
@@ -139,6 +140,7 @@
     border-radius: 10px;
     margin-bottom: 25px;
 }
+
 #minus {
     color: white;
     margin-left: 15px;
@@ -147,4 +149,9 @@
     background-color: grey;
     border: solid 3px grey;
     border-radius: 10px;
+}
+
+#answer {
+  color: red;
+  font-size: 50px;
 }
