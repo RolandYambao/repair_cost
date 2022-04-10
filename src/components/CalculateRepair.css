@@ -118,3 +118,33 @@
   .footer .links a {
     margin: 0 1rem;
   }
+
+/* Buttons */
+#plus {
+    color: white;
+    margin-right: 15px;
+    font-size: 30px;
+    padding: 10px 20px 15px 20px;
+    background-color: grey;
+    border: solid 3px grey;
+    border-radius: 10px;
+}
+#input {
+    transform: translate(0px, 5px);
+    width: 100px;
+    padding: 7px 0 7px 20px;
+    font-size: 40px;
+    text-align: center;
+    border: solid 3px grey;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+#minus {
+    color: white;
+    margin-left: 15px;
+    font-size: 30px;
+    padding: 10px 22.5px 15px 22.5px;
+    background-color: grey;
+    border: solid 3px grey;
+    border-radius: 10px;
+}

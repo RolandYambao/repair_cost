@@ -6,14 +6,14 @@ import {
 } from 'react-router-dom'
 
 // Components
-import Repair from "./components/Repair";
+import CalculateRepair from "./components/CalculateRepair";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Repair />} />
+          <Route path="/" element={<CalculateRepair />} />
         </Routes>
       </div>
     </Router>
