@@ -14,7 +14,6 @@ class Repair extends Component {
             </div>
         )
     }
-
 }
 
 export default Repair;
