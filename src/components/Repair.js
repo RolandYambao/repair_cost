@@ -3,10 +3,6 @@ import React, { Component } from 'react';
 
 class Repair extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div>
@@ -14,7 +10,7 @@ class Repair extends Component {
                     <div className="container">
                         <div className="navbar-brand">
                             <a className="navbar-item" href="https://bulma.io">
-                                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
+                                <img src="https://bulma.io/images/bulma-logo.png" alt="placeholder" width="112" height="28" />
                             </a>
 
                             <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -78,7 +74,7 @@ class Repair extends Component {
                         <div class="column is-3">
                             <article>
                                 <figure class="image is-5by3">
-                                    <img src="https://i.ibb.co/fq8hSGQ/placeholder-image-368x246.png" />
+                                    <img src="https://i.ibb.co/fq8hSGQ/placeholder-image-368x246.png" alt="placeholder" />
                                 </figure>
                                 <h2 class="subtitle">Creating a Group</h2>
                                 <span class="tag is-rounded">Users & Groups</span>
@@ -87,7 +83,7 @@ class Repair extends Component {
                         <div class="column is-3">
                             <article>
                                 <figure class="image is-5by3">
-                                    <img src="https://i.ibb.co/fq8hSGQ/placeholder-image-368x246.png" />
+                                    <img src="https://i.ibb.co/fq8hSGQ/placeholder-image-368x246.png" alt="placeholder" />
                                 </figure>
                                 <h2 class="subtitle">Downloading/Printing Your Invoices</h2>
                                 <span class="tag is-rounded">Billing & Accounts</span>
@@ -96,7 +92,7 @@ class Repair extends Component {
                         <div class="column is-3">
                             <article>
                                 <figure class="image is-5by3">
-                                    <img src="https://i.ibb.co/fq8hSGQ/placeholder-image-368x246.png" />
+                                    <img src="https://i.ibb.co/fq8hSGQ/placeholder-image-368x246.png" alt="placeholder" />
                                 </figure>
                                 <h2 class="subtitle">Changing the Account Owner</h2>
                                 <span class="tag is-rounded">Billing & Accounts</span>
@@ -105,7 +101,7 @@ class Repair extends Component {
                         <div class="column is-3">
                             <article>
                                 <figure class="image is-5by3">
-                                    <img src="https://i.ibb.co/fq8hSGQ/placeholder-image-368x246.png" />
+                                    <img src="https://i.ibb.co/fq8hSGQ/placeholder-image-368x246.png" alt="placeholder" />
                                 </figure>
                                 <h2 class="subtitle">Adding Internal Notes</h2>
                                 <span class="tag is-rounded">Billing & Accounts</span>
