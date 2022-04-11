@@ -58,7 +58,6 @@ class CalculateRepair extends Component {
         })
     }
 
-
     handleAdditionMiscSubmit(e) {
         this.state.cost = parseInt(this.state.cost) + parseInt(this.state.miscCost);
         totalMiscCost = totalMiscCost + parseInt(this.state.miscCost);
@@ -106,10 +105,7 @@ class CalculateRepair extends Component {
                 <nav className="navbar" role="navigation" aria-label="main navigation">
                     <div className="container">
                         <div className="navbar-brand">
-                            <a className="navbar-item" href="https://bulma.io">
-                                <img src="https://bulma.io/images/bulma-logo.png" alt="placeholder" width="112" height="28" />
-                            </a>
-
+                            <img id="logo" src="https://i.imgur.com/xQfwpjq.jpeg" alt="repairLogo" />
                             <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                                 <span aria-hidden="true"></span>
                                 <span aria-hidden="true"></span>
@@ -119,14 +115,14 @@ class CalculateRepair extends Component {
 
                         <div id="navbarBasicExample" className="navbar-menu">
                             <div className="navbar-end">
-                                <a className="navbar-item"> Tag </a>
-                                <a className="navbar-item"> Author </a>
-                                <a className="navbar-item"> Style Guide </a>
+                                <a className="navbar-item"> Home </a>
+                                <a className="navbar-item"> Calculate Repair </a>
+                                <a className="navbar-item"> All Repair Jobs </a>
                             </div>
                         </div>
                     </div>
                 </nav>
-                <section className="hero is-medium">
+                <section className="hero is-medium" id="totalRepairCost">
                     <div className="hero-body has-text-centered">
                         <h1 className="title is-2">Total Cost of Repair</h1>
                         <h1 id="answer">${this.state.cost}</h1>
@@ -153,7 +149,7 @@ class CalculateRepair extends Component {
                                     <button className="controls" id="plus" onClick={this.handleAdditionMaterialSubmit.bind(this)}>+</button>
                                     <input type="number" className="controls" id="input" placeholder="0" value={this.state.materialCost} onChange={this.handleMaterialCost.bind(this)} />
                                     <button className="controls" id="minus" onClick={this.handleSubtractionMaterialSubmit.bind(this)}>-</button>
-                                    <h2 className="subtitle">Material Cost: ${totalMaterialCost}</h2>
+                                    <h2 className="subtitle">Total Material Cost: ${totalMaterialCost}</h2>
                                 </article>
                             </div>
                         </div>
@@ -167,7 +163,7 @@ class CalculateRepair extends Component {
                                     <button className="controls" id="plus" onClick={this.handleAdditionLaborSubmit.bind(this)}>+</button>
                                     <input type="number" className="controls" id="input" placeholder="0" value={this.state.laborCost} onChange={this.handleLaborCost.bind(this)} />
                                     <button className="controls" id="minus" onClick={this.handleSubtractionLaborSubmit.bind(this)}>-</button>
-                                    <h2 className="subtitle">Labor Cost: ${totalLaborCost}</h2>
+                                    <h2 className="subtitle">Total Labor Cost: ${totalLaborCost}</h2>
                                 </article>
                             </div>
                         </div>
@@ -181,7 +177,7 @@ class CalculateRepair extends Component {
                                     <button className="controls" id="plus" onClick={this.handleAdditionMiscSubmit.bind(this)}>+</button>
                                     <input type="number" className="controls" id="input" placeholder="0" value={this.state.miscCost} onChange={this.handleMiscCost.bind(this)} />
                                     <button className="controls" id="minus" onClick={this.handleSubtractionMiscSubmit.bind(this)}>-</button>
-                                    <h2 className="subtitle">Misc. Cost: ${totalMiscCost}</h2>
+                                    <h2 className="subtitle">Total Misc. Cost: ${totalMiscCost}</h2>
                                 </article>
                             </div>
                         </div>

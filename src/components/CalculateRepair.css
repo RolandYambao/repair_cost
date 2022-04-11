@@ -155,3 +155,16 @@
   color: red;
   font-size: 50px;
 }
+
+.hero {
+  margin-bottom: -100px;
+}
+
+#totalRepairCost {
+  margin-top: -100px;
+}
+
+#logo {
+  height: 100px;
+  width: 100px;
+}
