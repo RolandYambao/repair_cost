@@ -132,7 +132,7 @@ class CalculateRepair extends Component {
                                     <button className="controls" id="plus" onClick={this.handleAdditionMaterialSubmit.bind(this)}>+</button>
                                     <input type="number" className="controls" id="input" placeholder="0" value={this.state.materialCost} onChange={this.handleMaterialCost.bind(this)} />
                                     <button className="controls" id="minus" onClick={this.handleSubtractionMaterialSubmit.bind(this)}>-</button>
-                                    <h2 className="subtitle">Total Material Cost: ${totalMaterialCost}</h2>
+                                    <h2 className="subtitle" id="totalCostEach">Total Material Cost: ${totalMaterialCost}</h2>
                                 </article>
                             </div>
                         </div>
@@ -147,7 +147,7 @@ class CalculateRepair extends Component {
                                     <button className="controls" id="plus" onClick={this.handleAdditionLaborSubmit.bind(this)}>+</button>
                                     <input type="number" className="controls" id="input" placeholder="0" value={this.state.laborCost} onChange={this.handleLaborCost.bind(this)} />
                                     <button className="controls" id="minus" onClick={this.handleSubtractionLaborSubmit.bind(this)}>-</button>
-                                    <h2 className="subtitle">Total Labor Cost: ${totalLaborCost}</h2>
+                                    <h2 className="subtitle" id="totalCostEach">Total Labor Cost: ${totalLaborCost}</h2>
                                 </article>
                             </div>
                         </div>
@@ -162,9 +162,18 @@ class CalculateRepair extends Component {
                                     <button className="controls" id="plus" onClick={this.handleAdditionMiscSubmit.bind(this)}>+</button>
                                     <input type="number" className="controls" id="input" placeholder="0" value={this.state.miscCost} onChange={this.handleMiscCost.bind(this)} />
                                     <button className="controls" id="minus" onClick={this.handleSubtractionMiscSubmit.bind(this)}>-</button>
-                                    <h2 className="subtitle">Total Misc. Cost: ${totalMiscCost}</h2>
+                                    <h2 className="subtitle" id="totalCostEach">Total Misc. Cost: ${totalMiscCost}</h2>
                                 </article>
                             </div>
+                        </div>
+                    </div>
+                    <div className="column is-full">
+                        <div className="card large">
+                            <article>
+                                <h1>Submit Repair Job</h1>
+                                <input type="text" className="controls" id="input" placeholder="Picture"></input><br />
+                                <button id="plus">Submit</button>
+                            </article>
                         </div>
                     </div>
                 </div>

@@ -15,9 +15,9 @@ const Navbar = (props) => {
                 </div>
                 <div id="navbarBasicExample" className="navbar-menu">
                     <div className="navbar-end">
-                        <a className="navbar-item"> Home </a>
-                        <a className="navbar-item"> Calculate Repair </a>
-                        <a className="navbar-item"> All Repair Jobs </a>
+                        <a className="navbar-item" href="/"> Home </a>
+                        <a className="navbar-item" href="/calculate"> Calculate Repair </a>
+                        <a className="navbar-item" href="/display"> All Repair Jobs </a>
                     </div>
                 </div>
             </div>
