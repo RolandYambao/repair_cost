@@ -1,6 +1,9 @@
 import './CalculateRepair.css';
 import React, { Component } from 'react';
 
+let totalMaterialCost = 0;
+let totalLaborCost = 0;
+let totalMiscCost = 0;
 
 class CalculateRepair extends Component {
 
@@ -8,11 +11,18 @@ class CalculateRepair extends Component {
         super(props);
         this.state = {
             cost: 0,
+            materialCost: 0,
+            laborCost: 0,
+            miscCost: 0,
         }
     }
 
     handleAdditionMaterialSubmit(e) {
         this.state.cost = parseInt(this.state.cost) + parseInt(this.state.materialCost);
+        totalMaterialCost = totalMaterialCost + parseInt(this.state.materialCost);
+        this.setState({
+            cost: this.state.cost,
+        })
     }
     handleMaterialCost(e) {
         this.setState({
@@ -21,11 +31,19 @@ class CalculateRepair extends Component {
     }
     handleSubtractionMaterialSubmit(e) {
         this.state.cost = parseInt(this.state.cost) - parseInt(this.state.materialCost);
+        totalMaterialCost = totalMaterialCost - parseInt(this.state.materialCost);
+        this.setState({
+            cost: this.state.cost,
+        })
     }
 
 
     handleAdditionLaborSubmit(e) {
         this.state.cost = parseInt(this.state.cost) + parseInt(this.state.laborCost);
+        totalLaborCost = totalLaborCost + parseInt(this.state.laborCost);
+        this.setState({
+            cost: this.state.cost,
+        })
     }
     handleLaborCost(e) {
         this.setState({
@@ -34,11 +52,19 @@ class CalculateRepair extends Component {
     }
     handleSubtractionLaborSubmit(e) {
         this.state.cost = parseInt(this.state.cost) - parseInt(this.state.laborCost);
+        totalLaborCost = totalLaborCost - parseInt(this.state.laborCost);
+        this.setState({
+            cost: this.state.cost,
+        })
     }
 
-    
+
     handleAdditionMiscSubmit(e) {
         this.state.cost = parseInt(this.state.cost) + parseInt(this.state.miscCost);
+        totalMiscCost = totalMiscCost + parseInt(this.state.miscCost);
+        this.setState({
+            cost: this.state.cost,
+        })
     }
     handleMiscCost(e) {
         this.setState({
@@ -47,9 +73,25 @@ class CalculateRepair extends Component {
     }
     handleSubtractionMiscSubmit(e) {
         this.state.cost = parseInt(this.state.cost) - parseInt(this.state.miscCost);
+        totalMiscCost = totalMiscCost - parseInt(this.state.miscCost);
+        this.setState({
+            cost: this.state.cost,
+        })
     }
 
     render() {
+        if (parseInt(this.state.cost) < 0) {
+            this.state.cost = 0;
+        }
+        if (totalMaterialCost < 0) {
+            totalMaterialCost = 0;
+        }
+        if (totalLaborCost < 0) {
+            totalLaborCost = 0;
+        }
+        if (totalMiscCost < 0) {
+            totalMiscCost = 0;
+        }
         return (
             <div>
                 <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -77,7 +119,7 @@ class CalculateRepair extends Component {
                 </nav>
                 <section className="hero is-medium">
                     <div className="hero-body has-text-centered">
-                        <h1 className="title is-2">Cost of Repair</h1>
+                        <h1 className="title is-2">Total Cost of Repair</h1>
                         <h1 id="answer">${this.state.cost}</h1>
                     </div>
                 </section>
@@ -102,7 +144,7 @@ class CalculateRepair extends Component {
                                     <button className="controls" id="plus" onClick={this.handleAdditionMaterialSubmit.bind(this)}>+</button>
                                     <input type="number" className="controls" id="input" placeholder="0" value={this.state.materialCost} onChange={this.handleMaterialCost.bind(this)} />
                                     <button className="controls" id="minus" onClick={this.handleSubtractionMaterialSubmit.bind(this)}>-</button>
-                                    <h2 className="subtitle">Material Cost</h2>
+                                    <h2 className="subtitle">Material Cost: ${totalMaterialCost}</h2>
                                 </article>
                             </div>
                         </div>
@@ -116,7 +158,7 @@ class CalculateRepair extends Component {
                                     <button className="controls" id="plus" onClick={this.handleAdditionLaborSubmit.bind(this)}>+</button>
                                     <input type="number" className="controls" id="input" placeholder="0" value={this.state.laborCost} onChange={this.handleLaborCost.bind(this)} />
                                     <button className="controls" id="minus" onClick={this.handleSubtractionLaborSubmit.bind(this)}>-</button>
-                                    <h2 className="subtitle">Labor Cost</h2>
+                                    <h2 className="subtitle">Labor Cost: ${totalLaborCost}</h2>
                                 </article>
                             </div>
                         </div>
@@ -130,7 +172,7 @@ class CalculateRepair extends Component {
                                     <button className="controls" id="plus" onClick={this.handleAdditionMiscSubmit.bind(this)}>+</button>
                                     <input type="number" className="controls" id="input" placeholder="0" value={this.state.miscCost} onChange={this.handleMiscCost.bind(this)} />
                                     <button className="controls" id="minus" onClick={this.handleSubtractionMiscSubmit.bind(this)}>-</button>
-                                    <h2 className="subtitle">Misc. Cost</h2>
+                                    <h2 className="subtitle">Misc. Cost: ${totalMiscCost}</h2>
                                 </article>
                             </div>
                         </div>
