@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 
 // Components
+import FrontPage from "./components/FrontPage";
 import CalculateRepair from "./components/CalculateRepair";
 import Navbar from './components/Navbar';
 import Footer from "./components/Footer";
@@ -16,6 +17,7 @@ function App() {
       <Navbar />
       <div className="App">
         <Routes>
+          <Route path="/" element={<FrontPage />} />
           <Route path="/calculate" element={<CalculateRepair />} />
         </Routes>
       </div>

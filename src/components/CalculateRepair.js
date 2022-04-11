@@ -75,8 +75,8 @@ class CalculateRepair extends Component {
     handleFullSubmission(e) {
         e.preventDefault();
         const repairData = {
-            jobName: this.state.jobName,
-            jobPicture: this.state.jobPicture,
+            estimateName: this.state.estimateName,
+            estimatePicture: this.state.estimatePicture,
             cost: this.state.cost,
             materialCost: this.state.materialCost,
             laborCost: this.state.laborCost,
@@ -182,13 +182,13 @@ class CalculateRepair extends Component {
                     <div className="column is-full">
                         <div className="card large" id="submitCard">
                             <article>
-                                <h1>Submit Repair Job</h1>
+                                <h1>Submit Repair Estimate</h1>
                                 <p>Total Cost of Repair</p>
                                 <h1 id="answer">${parseFloat(this.state.cost).toFixed(2)}</h1>
                                 <h2 className="subtitle" id="totalCostEach">Total Material Cost: ${parseFloat(totalMaterialCost).toFixed(2)}</h2>
                                 <h2 className="subtitle" id="totalCostEach">Total Labor Cost: ${parseFloat(totalLaborCost).toFixed(2)}</h2>
                                 <h2 className="subtitle" id="totalCostEach">Total Misc. Cost: ${parseFloat(totalMiscCost).toFixed(2)}</h2>
-                                <input type="text" className="userInput" id="nameInput" placeholder="Job Name"></input><br />
+                                <input type="text" className="userInput" id="nameInput" placeholder="Estimate Cost Name"></input><br />
                                 <input type="file" className="userInput" id="pictureInput" /><br />
                                 <button id="submitButton">Submit</button>
                             </article>

@@ -1,0 +1,23 @@
+#repairCostButton {
+    margin: auto;
+    width: 49%;
+    height: 450px;
+    margin-right: 10px;
+}
+
+#repairEstimateButton {
+    margin: auto;
+    width: 49%;
+    height: 450px;
+}
+
+body {
+    background-color: rgb(236, 236, 236);
+}
+
+#yellowTape {
+    color: white;
+    background-color: grey;
+    border: 5px dashed black;
+    font-size: 35px;
+}
