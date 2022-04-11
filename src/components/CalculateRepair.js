@@ -18,9 +18,9 @@ class CalculateRepair extends Component {
     }
 
     handleAdditionMaterialSubmit() {
-        totalMaterialCost = totalMaterialCost + parseInt(this.state.materialCost);
+        totalMaterialCost = totalMaterialCost + parseFloat(this.state.materialCost);
         this.setState({
-            cost: parseInt(this.state.cost) + parseInt(this.state.materialCost),
+            cost: parseFloat(this.state.cost) + parseFloat(this.state.materialCost),
         })
     }
     handleMaterialCost(e) {
@@ -29,17 +29,17 @@ class CalculateRepair extends Component {
         })
     }
     handleSubtractionMaterialSubmit() {
-        totalMaterialCost = totalMaterialCost - parseInt(this.state.materialCost);
+        totalMaterialCost = totalMaterialCost - parseFloat(this.state.materialCost);
         this.setState({
-            cost: parseInt(this.state.cost) - parseInt(this.state.materialCost),
+            cost: parseFloat(this.state.cost) - parseFloat(this.state.materialCost),
         })
     }
 
 
     handleAdditionLaborSubmit() {
-        totalLaborCost = totalLaborCost + parseInt(this.state.laborCost);
+        totalLaborCost = totalLaborCost + parseFloat(this.state.laborCost);
         this.setState({
-            cost: parseInt(this.state.cost) + parseInt(this.state.laborCost),
+            cost: parseFloat(this.state.cost) + parseFloat(this.state.laborCost),
         })
     }
     handleLaborCost(e) {
@@ -48,16 +48,16 @@ class CalculateRepair extends Component {
         })
     }
     handleSubtractionLaborSubmit() {
-        totalLaborCost = totalLaborCost - parseInt(this.state.laborCost);
+        totalLaborCost = totalLaborCost - parseFloat(this.state.laborCost);
         this.setState({
-            cost: parseInt(this.state.cost) - parseInt(this.state.laborCost),
+            cost: parseFloat(this.state.cost) - parseFloat(this.state.laborCost),
         })
     }
 
     handleAdditionMiscSubmit() {
-        totalMiscCost = totalMiscCost + parseInt(this.state.miscCost);
+        totalMiscCost = totalMiscCost + parseFloat(this.state.miscCost);
         this.setState({
-            cost: parseInt(this.state.cost) + parseInt(this.state.miscCost),
+            cost: parseFloat(this.state.cost) + parseFloat(this.state.miscCost),
         })
     }
     handleMiscCost(e) {
@@ -66,9 +66,9 @@ class CalculateRepair extends Component {
         })
     }
     handleSubtractionMiscSubmit() {
-        totalMiscCost = totalMiscCost - parseInt(this.state.miscCost);
+        totalMiscCost = totalMiscCost - parseFloat(this.state.miscCost);
         this.setState({
-            cost: parseInt(this.state.cost) - parseInt(this.state.miscCost),
+            cost: parseFloat(this.state.cost) - parseFloat(this.state.miscCost),
         })
     }
 
@@ -85,7 +85,7 @@ class CalculateRepair extends Component {
     }
 
     render() {
-        if (parseInt(this.state.cost) < 0) {
+        if (parseFloat(this.state.cost).toFixed(2) < 0) {
             this.setState({
                 cost: 0,
             })
@@ -119,7 +119,7 @@ class CalculateRepair extends Component {
                 <section className="hero is-medium" id="totalRepairCost">
                     <div className="hero-body has-text-centered">
                         <h1 className="title is-2" id="totalCost">Total Cost of Repair</h1>
-                        <h1 id="answer">${this.state.cost}</h1>
+                        <h1 id="answer">${parseFloat(this.state.cost).toFixed(2)}</h1>
                     </div>
                 </section>
                 <div className="container is-max-desktop">
@@ -142,9 +142,9 @@ class CalculateRepair extends Component {
                                     </figure>
                                     <br />
                                     <button className="controls" id="plus" onClick={this.handleAdditionMaterialSubmit.bind(this)}>+</button>
-                                    <input type="number" className="controls" id="input" placeholder="0" value={this.state.materialCost} onChange={this.handleMaterialCost.bind(this)} />
+                                    <input type="number" step=".01" min="0" className="controls" id="input" placeholder="0" value={this.state.materialCost} onChange={this.handleMaterialCost.bind(this)} />
                                     <button className="controls" id="minus" onClick={this.handleSubtractionMaterialSubmit.bind(this)}>-</button>
-                                    <h2 className="subtitle" id="totalCostEach">Total Material Cost: ${totalMaterialCost}</h2>
+                                    <h2 className="subtitle" id="totalCostEach">Total Material Cost: ${parseFloat(totalMaterialCost).toFixed(2)}</h2>
                                 </article>
                             </div>
                         </div>
@@ -157,9 +157,9 @@ class CalculateRepair extends Component {
                                     </figure>
                                     <br />
                                     <button className="controls" id="plus" onClick={this.handleAdditionLaborSubmit.bind(this)}>+</button>
-                                    <input type="number" className="controls" id="input" placeholder="0" value={this.state.laborCost} onChange={this.handleLaborCost.bind(this)} />
+                                    <input type="number" step=".01" min="0" className="controls" id="input" placeholder="0" value={this.state.laborCost} onChange={this.handleLaborCost.bind(this)} />
                                     <button className="controls" id="minus" onClick={this.handleSubtractionLaborSubmit.bind(this)}>-</button>
-                                    <h2 className="subtitle" id="totalCostEach">Total Labor Cost: ${totalLaborCost}</h2>
+                                    <h2 className="subtitle" id="totalCostEach">Total Labor Cost: ${parseFloat(totalLaborCost).toFixed(2)}</h2>
                                 </article>
                             </div>
                         </div>
@@ -172,9 +172,9 @@ class CalculateRepair extends Component {
                                     </figure>
                                     <br />
                                     <button className="controls" id="plus" onClick={this.handleAdditionMiscSubmit.bind(this)}>+</button>
-                                    <input type="number" className="controls" id="input" placeholder="0" value={this.state.miscCost} onChange={this.handleMiscCost.bind(this)} />
+                                    <input type="number" step=".01" min="0" className="controls" id="input" placeholder="0" value={this.state.miscCost} onChange={this.handleMiscCost.bind(this)} />
                                     <button className="controls" id="minus" onClick={this.handleSubtractionMiscSubmit.bind(this)}>-</button>
-                                    <h2 className="subtitle" id="totalCostEach">Total Misc. Cost: ${totalMiscCost}</h2>
+                                    <h2 className="subtitle" id="totalCostEach">Total Misc. Cost: ${parseFloat(totalMiscCost).toFixed(2)}</h2>
                                 </article>
                             </div>
                         </div>
@@ -184,10 +184,10 @@ class CalculateRepair extends Component {
                             <article>
                                 <h1>Submit Repair Job</h1>
                                 <p>Total Cost of Repair</p>
-                                <h1 id="answer">${this.state.cost}</h1>
-                                <h2 className="subtitle" id="totalCostEach">Total Material Cost: ${totalMaterialCost}</h2>
-                                <h2 className="subtitle" id="totalCostEach">Total Labor Cost: ${totalLaborCost}</h2>
-                                <h2 className="subtitle" id="totalCostEach">Total Misc. Cost: ${totalMiscCost}</h2>
+                                <h1 id="answer">${parseFloat(this.state.cost).toFixed(2)}</h1>
+                                <h2 className="subtitle" id="totalCostEach">Total Material Cost: ${parseFloat(totalMaterialCost).toFixed(2)}</h2>
+                                <h2 className="subtitle" id="totalCostEach">Total Labor Cost: ${parseFloat(totalLaborCost).toFixed(2)}</h2>
+                                <h2 className="subtitle" id="totalCostEach">Total Misc. Cost: ${parseFloat(totalMiscCost).toFixed(2)}</h2>
                                 <input type="text" className="userInput" id="nameInput" placeholder="Job Name"></input><br />
                                 <input type="file" className="userInput" id="pictureInput" /><br />
                                 <button id="submitButton">Submit</button>
