@@ -6,7 +6,7 @@ const FrontPage = () => {
         <div className="container is-max-desktop">
             <div id="yellowTape">Welcome!</div>
             <div id="about">
-                <h1>Greetings RepairCo LLC. clients we are dedicated to repairng any damages to your home for a fair price.
+                <h1>Greetings RepairCo LLC. clients we are dedicated to repairing any damages to your home and items for a fair price.
                     This application is to accurately estimate the damages in need of repairing to assist our field technicans.
                 </h1>
             </div>
@@ -28,7 +28,7 @@ const FrontPage = () => {
                         <a href="/viewitems">
                             <article>
                                 <figure className="image is-5by3">
-                                    <img src="https://www.piercecountywa.gov/ImageRepository/Document?documentID=74192" alt="Home Repair" />
+                                    <img src="https://i.imgur.com/qU8cLwQ.jpeg" alt="Home Repair" />
                                 </figure>
                                 <h2 className="subtitle">Home Repair</h2>
                             </article>
@@ -39,7 +39,7 @@ const FrontPage = () => {
                         <article>
                             <figure className="image is-5by3">
                                 <img
-                                    src="https://athome-solutions.com/wp-content/uploads/2017/07/Appliance-Repairs-1024x683.jpg"
+                                    src="https://i.imgur.com/yLXE5N7.jpeg"
                                     alt="Appliance Repair"
                                 />
                             </figure>
@@ -50,7 +50,7 @@ const FrontPage = () => {
                         <article>
                             <figure className="image is-5by3">
                                 <img
-                                    src="https://hubautoparts.com/wp-content/uploads/2017/08/can-routine-vehicle-maintenance-improve-gas-mileage.jpeg"
+                                    src="https://i.imgur.com/7TiI9Yg.jpeg"
                                     alt="Car Repair"
                                 />
                             </figure>
@@ -61,8 +61,8 @@ const FrontPage = () => {
                         <article>
                             <figure className="image is-5by3">
                                 <img
-                                    src="https://i.imgur.com/xQfwpjq.jpeg"
-                                    alt="Repair Logo"
+                                    src="https://i.imgur.com/HL3EoDc.jpeg"
+                                    alt="General Repair"
                                 />
                             </figure>
                             <h2 className="subtitle">and Many More....</h2>

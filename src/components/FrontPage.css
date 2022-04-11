@@ -21,3 +21,7 @@ body {
     border: 5px dashed black;
     font-size: 35px;
 }
+
+img {
+    object-fit: contain;
+}
