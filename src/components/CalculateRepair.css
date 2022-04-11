@@ -219,3 +219,12 @@ h1 {
   margin-left: 90px;
   margin-bottom: 10px;
 }
+
+#submitButton {
+  color: white;
+  font-size: 20px;
+  background-color: rgb(74, 79, 80);
+  border: solid 3px rgb(74, 79, 80);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
