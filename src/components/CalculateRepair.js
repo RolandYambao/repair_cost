@@ -17,11 +17,10 @@ class CalculateRepair extends Component {
         }
     }
 
-    handleAdditionMaterialSubmit(e) {
-        this.state.cost = parseInt(this.state.cost) + parseInt(this.state.materialCost);
+    handleAdditionMaterialSubmit() {
         totalMaterialCost = totalMaterialCost + parseInt(this.state.materialCost);
         this.setState({
-            cost: this.state.cost,
+            cost: parseInt(this.state.cost) + parseInt(this.state.materialCost),
         })
     }
     handleMaterialCost(e) {
@@ -29,20 +28,18 @@ class CalculateRepair extends Component {
             materialCost: e.target.value,
         })
     }
-    handleSubtractionMaterialSubmit(e) {
-        this.state.cost = parseInt(this.state.cost) - parseInt(this.state.materialCost);
+    handleSubtractionMaterialSubmit() {
         totalMaterialCost = totalMaterialCost - parseInt(this.state.materialCost);
         this.setState({
-            cost: this.state.cost,
+            cost: parseInt(this.state.cost) - parseInt(this.state.materialCost),
         })
     }
 
 
-    handleAdditionLaborSubmit(e) {
-        this.state.cost = parseInt(this.state.cost) + parseInt(this.state.laborCost);
+    handleAdditionLaborSubmit() {
         totalLaborCost = totalLaborCost + parseInt(this.state.laborCost);
         this.setState({
-            cost: this.state.cost,
+            cost: parseInt(this.state.cost) + parseInt(this.state.laborCost),
         })
     }
     handleLaborCost(e) {
@@ -50,19 +47,17 @@ class CalculateRepair extends Component {
             laborCost: e.target.value,
         })
     }
-    handleSubtractionLaborSubmit(e) {
-        this.state.cost = parseInt(this.state.cost) - parseInt(this.state.laborCost);
+    handleSubtractionLaborSubmit() {
         totalLaborCost = totalLaborCost - parseInt(this.state.laborCost);
         this.setState({
-            cost: this.state.cost,
+            cost: parseInt(this.state.cost) - parseInt(this.state.laborCost),
         })
     }
 
-    handleAdditionMiscSubmit(e) {
-        this.state.cost = parseInt(this.state.cost) + parseInt(this.state.miscCost);
+    handleAdditionMiscSubmit() {
         totalMiscCost = totalMiscCost + parseInt(this.state.miscCost);
         this.setState({
-            cost: this.state.cost,
+            cost: parseInt(this.state.cost) + parseInt(this.state.miscCost),
         })
     }
     handleMiscCost(e) {
@@ -70,17 +65,18 @@ class CalculateRepair extends Component {
             miscCost: e.target.value,
         })
     }
-    handleSubtractionMiscSubmit(e) {
-        this.state.cost = parseInt(this.state.cost) - parseInt(this.state.miscCost);
+    handleSubtractionMiscSubmit() {
         totalMiscCost = totalMiscCost - parseInt(this.state.miscCost);
         this.setState({
-            cost: this.state.cost,
+            cost: parseInt(this.state.cost) - parseInt(this.state.miscCost),
         })
     }
 
     render() {
         if (parseInt(this.state.cost) < 0) {
-            this.state.cost = 0;
+            this.setState({
+                cost: 0,
+            })
         }
         if (totalMaterialCost < 0) {
             totalMaterialCost = 0;
@@ -91,14 +87,20 @@ class CalculateRepair extends Component {
         if (totalMiscCost < 0) {
             totalMiscCost = 0;
         }
-        if (isNaN(this.state.materialCost) == true) {
-            this.state.materialCost = 0;
+        if (isNaN(this.state.materialCost) === true) {
+            this.setState({
+                materialCost: 0
+            })
         }
-        if (isNaN(this.state.laborCost) == true) {
-            this.state.laborCost = 0;
+        if (isNaN(this.state.laborCost) === true) {
+            this.setState({
+                laborCost: 0
+            })
         }
-        if (isNaN(this.state.miscCost) == true) {
-            this.state.miscCost = 0;
+        if (isNaN(this.state.miscCost) === true) {
+            this.setState({
+                miscCost: 0
+            })
         }
         return (
             <div>
