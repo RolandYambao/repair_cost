@@ -142,8 +142,9 @@ class CalculateRepair extends Component {
                         <div className="column is-4">
                             <div className="card large">
                                 <article>
+                                    <h1>Material Cost</h1>
                                     <figure className="image is-5by3">
-                                        <img src="https://i.ibb.co/fq8hSGQ/placeholder-image-368x246.png" alt="placeholder" />
+                                        <img src="https://i.imgur.com/f90xBtO.jpeg" alt="placeholder" />
                                     </figure>
                                     <br />
                                     <button className="controls" id="plus" onClick={this.handleAdditionMaterialSubmit.bind(this)}>+</button>
@@ -156,8 +157,9 @@ class CalculateRepair extends Component {
                         <div className="column is-4">
                             <div className="card large">
                                 <article>
+                                    <h1>Labor Cost</h1>
                                     <figure className="image is-5by3">
-                                        <img src="https://i.ibb.co/fq8hSGQ/placeholder-image-368x246.png" alt="placeholder" />
+                                        <img src="https://i.imgur.com/DbJbePf.jpeg" alt="placeholder" />
                                     </figure>
                                     <br />
                                     <button className="controls" id="plus" onClick={this.handleAdditionLaborSubmit.bind(this)}>+</button>
@@ -170,8 +172,9 @@ class CalculateRepair extends Component {
                         <div className="column is-4">
                             <div className="card large">
                                 <article>
+                                    <h1>Misc. Cost</h1>
                                     <figure className="image is-5by3">
-                                        <img src="https://i.ibb.co/fq8hSGQ/placeholder-image-368x246.png" alt="placeholder" />
+                                        <img src="https://i.imgur.com/qeyzYmG.jpeg" alt="placeholder" />
                                     </figure>
                                     <br />
                                     <button className="controls" id="plus" onClick={this.handleAdditionMiscSubmit.bind(this)}>+</button>

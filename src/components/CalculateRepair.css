@@ -166,6 +166,7 @@ hr {
 }
 
 #totalCost {
+  -webkit-text-stroke: 2px black;
   text-align: center;
   color: red;
 }
@@ -196,4 +197,11 @@ strong {
 
 #createEstimate {
   margin-top: 60px;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
