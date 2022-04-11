@@ -10,6 +10,13 @@ class CalculateRepair extends Component {
         }
     }
 
+    handleCost(e) {
+        e.preventDefault();
+        this.setState({
+            addedCost: e.target.value,
+        })
+    }
+
     render() {
         return (
             <div>
