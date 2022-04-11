@@ -92,6 +92,15 @@ class CalculateRepair extends Component {
         if (totalMiscCost < 0) {
             totalMiscCost = 0;
         }
+        if (isNaN(this.state.materialCost) == true) {
+            this.state.materialCost = 0;
+        }
+        if (isNaN(this.state.laborCost) == true) {
+            this.state.laborCost = 0;
+        }
+        if (isNaN(this.state.miscCost) == true) {
+            this.state.miscCost = 0;
+        }
         return (
             <div>
                 <nav className="navbar" role="navigation" aria-label="main navigation">
