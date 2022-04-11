@@ -1,5 +1,6 @@
 import './CalculateRepair.css';
 import React, { Component } from 'react';
+import DisplayRepair from './DisplayRepair';
 
 let totalMaterialCost = 0;
 let totalLaborCost = 0;

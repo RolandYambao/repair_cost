@@ -13,7 +13,7 @@ const FrontPage = () => {
             <br />
             <section className="buttonSection">
                 <a className="button is-danger" id="repairCostButton" type="button" href="/calculate">Estimate Repair Cost</a>
-                <a className="button is-info" id="repairEstimateButton" type="button" href="/newsale">See all Repair Estimates</a>
+                <a className="button is-info" id="repairEstimateButton" type="button" href="/display">See all Repair Estimates</a>
             </section>
             <section className="featured">
                 <div className="level">

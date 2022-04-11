@@ -8,6 +8,7 @@ import {
 // Components
 import FrontPage from "./components/FrontPage";
 import CalculateRepair from "./components/CalculateRepair";
+import DisplayRepair from "./components/DisplayRepair";
 import Navbar from './components/Navbar';
 import Footer from "./components/Footer";
 
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<FrontPage />} />
           <Route path="/calculate" element={<CalculateRepair />} />
+          <Route path="/display" element={<DisplayRepair />} />
         </Routes>
       </div>
       <Footer />
