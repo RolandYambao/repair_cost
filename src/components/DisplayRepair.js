@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NewRepair from "./NewRepair";
 
 class DisplayRepair extends Component {
 
@@ -12,7 +13,7 @@ class DisplayRepair extends Component {
     displaySubmissions() {
         const displaySubmissions = this.state.submissions.map((a, idx) => {
             return (
-                <DisplayRepair key={idx} />
+                <NewRepair key={idx} />
             )
         })
     }
