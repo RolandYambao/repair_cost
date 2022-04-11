@@ -133,7 +133,7 @@ class CalculateRepair extends Component {
                         <div className="level">
                             <div className="level-left">
                                 <div className="level-item">
-                                    <h2 className="subtitle">Create Estimate to Repair Cost</h2>
+                                    <h2 className="subtitle" id="createEstimate">Create Estimate of Repair Cost</h2>
                                 </div>
                             </div>
                         </div>
