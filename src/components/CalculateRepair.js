@@ -72,6 +72,18 @@ class CalculateRepair extends Component {
         })
     }
 
+    handleFullSubmission(e) {
+        e.preventDefault();
+        const repairData = {
+            jobName: this.state.jobName,
+            jobPicture: this.state.jobPicture,
+            cost: this.state.cost,
+            materialCost: this.state.materialCost,
+            laborCost: this.state.laborCost,
+            miscScot: this.state.miscCost,
+        }
+    }
+
     render() {
         if (parseInt(this.state.cost) < 0) {
             this.setState({
@@ -176,7 +188,8 @@ class CalculateRepair extends Component {
                                 <h2 className="subtitle" id="totalCostEach">Total Material Cost: ${totalMaterialCost}</h2>
                                 <h2 className="subtitle" id="totalCostEach">Total Labor Cost: ${totalLaborCost}</h2>
                                 <h2 className="subtitle" id="totalCostEach">Total Misc. Cost: ${totalMiscCost}</h2>
-                                <input type="text" className="controls" id="submitInput" placeholder="Name"></input><br />
+                                <input type="text" className="userInput" id="nameInput" placeholder="Job Name"></input><br />
+                                <input type="file" className="userInput" id="pictureInput" /><br />
                                 <button id="submitButton">Submit</button>
                             </article>
                         </div>

@@ -213,3 +213,9 @@ h1 {
 #submitCard {
   background-color: rgb(230, 230, 230);
 }
+
+#pictureInput {
+  margin-top: 10px;
+  margin-left: 90px;
+  margin-bottom: 10px;
+}
