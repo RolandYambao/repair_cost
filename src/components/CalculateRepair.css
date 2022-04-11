@@ -180,8 +180,9 @@ hr {
 }
 
 #logo {
-  height: 100px;
-  width: 100px;
+  position: relative;
+  width: 36%;
+  image-rendering: optimizeQuality;
 }
 
 #companyName,
