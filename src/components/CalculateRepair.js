@@ -168,11 +168,16 @@ class CalculateRepair extends Component {
                         </div>
                     </div>
                     <div className="column is-full">
-                        <div className="card large">
+                        <div className="card large" id="submitCard">
                             <article>
                                 <h1>Submit Repair Job</h1>
-                                <input type="text" className="controls" id="input" placeholder="Picture"></input><br />
-                                <button id="plus">Submit</button>
+                                <p>Total Cost of Repair</p>
+                                <h1 id="answer">${this.state.cost}</h1>
+                                <h2 className="subtitle" id="totalCostEach">Total Material Cost: ${totalMaterialCost}</h2>
+                                <h2 className="subtitle" id="totalCostEach">Total Labor Cost: ${totalLaborCost}</h2>
+                                <h2 className="subtitle" id="totalCostEach">Total Misc. Cost: ${totalMiscCost}</h2>
+                                <input type="text" className="controls" id="submitInput" placeholder="Name"></input><br />
+                                <button id="submitButton">Submit</button>
                             </article>
                         </div>
                     </div>

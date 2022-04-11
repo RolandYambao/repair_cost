@@ -135,7 +135,7 @@ hr {
 
 #input {
   transform: translate(0px, 5px);
-  width: 100px;
+  width: 150px;
   padding: 7px 0 7px 20px;
   font-size: 40px;
   text-align: center;
@@ -208,4 +208,8 @@ h1 {
 
 #totalCostEach {
   margin-bottom: 5px;
+}
+
+#submitCard {
+  background-color: rgb(230, 230, 230);
 }
