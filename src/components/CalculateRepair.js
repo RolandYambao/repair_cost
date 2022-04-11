@@ -124,7 +124,7 @@ class CalculateRepair extends Component {
                 </nav>
                 <section className="hero is-medium" id="totalRepairCost">
                     <div className="hero-body has-text-centered">
-                        <h1 className="title is-2">Total Cost of Repair</h1>
+                        <h1 className="title is-2" id="totalCost">Total Cost of Repair</h1>
                         <h1 id="answer">${this.state.cost}</h1>
                     </div>
                 </section>
@@ -182,6 +182,13 @@ class CalculateRepair extends Component {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div>
+                    <footer className="footer bg-dark">
+                        <div className="container text-center">
+                            <span className="text-muted">@2022 RepairCo LLC.</span>
+                        </div>
+                    </footer>
                 </div>
             </div>
         )

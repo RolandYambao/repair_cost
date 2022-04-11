@@ -62,7 +62,7 @@ hr {
 
 .featured .level {
   padding-bottom: 1rem;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid rgb(74, 79, 80);
 }
 
 .featured .level-item h2 {
@@ -128,8 +128,8 @@ hr {
   margin-right: 15px;
   font-size: 30px;
   padding: 10px 20px 15px 20px;
-  background-color: grey;
-  border: solid 3px grey;
+  background-color: rgb(74, 79, 80);
+  border: solid 3px rgb(74, 79, 80);
   border-radius: 10px;
 }
 
@@ -139,7 +139,7 @@ hr {
   padding: 7px 0 7px 20px;
   font-size: 40px;
   text-align: center;
-  border: solid 3px grey;
+  border: solid 3px rgb(74, 79, 80);
   border-radius: 10px;
   margin-bottom: 25px;
 }
@@ -149,19 +149,25 @@ hr {
   margin-left: 15px;
   font-size: 30px;
   padding: 10px 22.5px 15px 22.5px;
-  background-color: grey;
-  border: solid 3px grey;
+  background-color: rgb(74, 79, 80);
+  border: solid 3px rgb(74, 79, 80);
   border-radius: 10px;
 }
 
 #answer {
+  text-align: center;
   background-color: white;
-  padding: 0.1em 0.2em;
-  /* margin-left: 400px;
-  margin-right: 400px; */
+  margin-left: 40%;
+  margin-right: 40%;
   border-radius: 20%;
+  border-style: solid;
   color: red;
   font-size: 50px;
+}
+
+#totalCost {
+  text-align: center;
+  color: red;
 }
 
 .hero {
