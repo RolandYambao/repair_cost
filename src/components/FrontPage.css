@@ -22,6 +22,6 @@ body {
     font-size: 35px;
 }
 
-img {
+#frontImage {
     object-fit: contain;
 }

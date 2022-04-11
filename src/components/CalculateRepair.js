@@ -139,7 +139,7 @@ class CalculateRepair extends Component {
                                 <article>
                                     <h1>Material Cost</h1>
                                     <figure className="image is-5by3">
-                                        <img src="https://i.imgur.com/f90xBtO.jpeg" alt="placeholder" />
+                                        <img src="https://i.imgur.com/f90xBtO.jpeg" alt="repairMaterials" id="costPicture" />
                                     </figure>
                                     <br />
                                     <button className="controls" id="plus" onClick={this.handleAdditionMaterialSubmit.bind(this)}>+</button>
@@ -154,7 +154,7 @@ class CalculateRepair extends Component {
                                 <article>
                                     <h1>Labor Cost</h1>
                                     <figure className="image is-5by3">
-                                        <img src="https://i.imgur.com/DbJbePf.jpeg" alt="placeholder" />
+                                        <img src="https://i.imgur.com/DbJbePf.jpeg" alt="constructionWorker" id="costPicture" />
                                     </figure>
                                     <br />
                                     <button className="controls" id="plus" onClick={this.handleAdditionLaborSubmit.bind(this)}>+</button>
@@ -169,7 +169,7 @@ class CalculateRepair extends Component {
                                 <article>
                                     <h1>Misc. Cost</h1>
                                     <figure className="image is-5by3">
-                                        <img src="https://i.imgur.com/qeyzYmG.jpeg" alt="placeholder" />
+                                        <img src="https://i.imgur.com/qeyzYmG.jpeg" alt="warningSign" id="costPicture" />
                                     </figure>
                                     <br />
                                     <button className="controls" id="plus" onClick={this.handleAdditionMiscSubmit.bind(this)}>+</button>
@@ -182,7 +182,7 @@ class CalculateRepair extends Component {
                     </div>
                     <div className="column is-full">
                         <div className="card large" id="submitCard">
-                            <article>
+                            <form>
                                 <h1>Submit Repair Estimate</h1>
                                 <p>Total Cost of Repair</p>
                                 <h1 id="answer">${parseFloat(this.state.cost).toFixed(2)}</h1>
@@ -192,7 +192,7 @@ class CalculateRepair extends Component {
                                 <input type="text" className="userInput" id="nameInput" placeholder="Estimate Cost Name"></input><br />
                                 <input type="file" className="userInput" id="pictureInput" /><br />
                                 <button id="submitButton">Submit</button>
-                            </article>
+                            </form>
                         </div>
                     </div>
                 </div>

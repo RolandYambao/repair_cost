@@ -28,7 +28,10 @@ const FrontPage = () => {
                         <a href="/viewitems">
                             <article>
                                 <figure className="image is-5by3">
-                                    <img src="https://i.imgur.com/qU8cLwQ.jpeg" alt="Home Repair" />
+                                    <img src="https://i.imgur.com/qU8cLwQ.jpeg"
+                                        alt="Home Repair"
+                                        id="frontImage"
+                                    />
                                 </figure>
                                 <h2 className="subtitle">Home Repair</h2>
                             </article>
@@ -41,6 +44,7 @@ const FrontPage = () => {
                                 <img
                                     src="https://i.imgur.com/yLXE5N7.jpeg"
                                     alt="Appliance Repair"
+                                    id="frontImage"
                                 />
                             </figure>
                             <h2 className="subtitle">Appliance Repair</h2>
@@ -52,6 +56,7 @@ const FrontPage = () => {
                                 <img
                                     src="https://i.imgur.com/7TiI9Yg.jpeg"
                                     alt="Car Repair"
+                                    id="frontImage"
                                 />
                             </figure>
                             <h2 className="subtitle">Car Repair</h2>
@@ -63,6 +68,7 @@ const FrontPage = () => {
                                 <img
                                     src="https://i.imgur.com/HL3EoDc.jpeg"
                                     alt="General Repair"
+                                    id="frontImage"
                                 />
                             </figure>
                             <h2 className="subtitle">and Many More....</h2>
