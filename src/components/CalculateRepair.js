@@ -73,16 +73,55 @@ class CalculateRepair extends Component {
         })
     }
 
+
+    handleEstimateName(e) {
+        e.preventDefault();
+        this.setState({
+            estimateName: e.target.value,
+        })
+    }
+    handleEstimatePicture(e) {
+        e.preventDefault();
+        this.setState({
+            estimatePicture: e.target.value,
+        })
+    }
+    handleTotalCost(e) {
+        e.preventDefault();
+        this.setState({
+            cost: e.target.value,
+        })
+    }
+    handleMaterialCostFinal(e) {
+        e.preventDefault();
+        this.setState({
+            materialCost: totalMaterialCost,
+        })
+    }
+    handleLaborCostFinal(e) {
+        e.preventDefault();
+        this.setState({
+            laborCost: totalLaborCost,
+        })
+    }
+    handleMiscCostFinal(e) {
+        e.preventDefault();
+        this.setState({
+            miscCost: totalMiscCost,
+        })
+    }
+
     handleFullSubmission(e) {
         e.preventDefault();
         const repairData = {
             estimateName: this.state.estimateName,
             estimatePicture: this.state.estimatePicture,
-            cost: this.state.cost,
-            materialCost: this.state.materialCost,
-            laborCost: this.state.laborCost,
-            miscScot: this.state.miscCost,
+            cost: parseFloat(this.state.cost).toFixed(2),
+            materialCost: parseFloat(totalMaterialCost).toFixed(2),
+            laborCost: parseFloat(totalLaborCost).toFixed(2),
+            miscCost: parseFloat(totalMiscCost).toFixed(2),
         }
+        console.log(repairData);
     }
 
     render() {
@@ -182,15 +221,22 @@ class CalculateRepair extends Component {
                     </div>
                     <div className="column is-full">
                         <div className="card large" id="submitCard">
-                            <form>
+                            <form onSubmit={this.handleFullSubmission.bind(this)}>
                                 <h1>Submit Repair Estimate</h1>
-                                <p>Total Cost of Repair</p>
-                                <h1 id="answer">${parseFloat(this.state.cost).toFixed(2)}</h1>
-                                <h2 className="subtitle" id="totalCostEach">Total Material Cost: ${parseFloat(totalMaterialCost).toFixed(2)}</h2>
-                                <h2 className="subtitle" id="totalCostEach">Total Labor Cost: ${parseFloat(totalLaborCost).toFixed(2)}</h2>
-                                <h2 className="subtitle" id="totalCostEach">Total Misc. Cost: ${parseFloat(totalMiscCost).toFixed(2)}</h2>
-                                <input type="text" className="userInput" id="nameInput" placeholder="Estimate Cost Name"></input><br />
-                                <input type="file" className="userInput" id="pictureInput" /><br />
+                                <span className="subtitle" id="totalCostEach" >Total Cost of Repair: $</span>
+                                <input type="number" value={parseFloat(this.state.cost).toFixed(2)} onChange={this.handleTotalCost.bind(this)}></input><br /><br />
+
+                                <span className="subtitle" id="totalCostEach">Total Material Cost: $</span>
+                                <input type="number" value={parseFloat(totalMaterialCost).toFixed(2)} onChange={this.handleMaterialCostFinal.bind(this)}></input><br /><br />
+
+                                <span className="subtitle" id="totalCostEach">Total Labor Cost: $</span>
+                                <input type="number" value={parseFloat(totalLaborCost).toFixed(2)} onChange={this.handleLaborCostFinal.bind(this)}></input><br /><br />
+
+                                <span className="subtitle" id="totalCostEach">Total Misc. Cost: $</span>
+                                <input type="number" value={parseFloat(totalMiscCost).toFixed(2)} onChange={this.handleMiscCostFinal.bind(this)}></input><br /><br />
+
+                                <input type="text" className="userInput" id="nameInput" placeholder="Estimate Cost Name" value={this.state.estimateName} onChange={this.handleEstimateName.bind(this)}></input><br />
+                                <input type="file" className="userInput" id="pictureInput" value={this.state.estimatePicture} onChange={this.handleEstimatePicture.bind(this)} /><br />
                                 <button id="submitButton">Submit</button>
                             </form>
                         </div>
