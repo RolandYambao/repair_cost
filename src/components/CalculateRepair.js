@@ -16,6 +16,7 @@ class CalculateRepair extends Component {
             laborCost: 0,
             miscCost: 0,
             submissions: [],
+            counter: 0,
         }
     }
 
@@ -75,6 +76,12 @@ class CalculateRepair extends Component {
     }
 
 
+    handleCounter(e) {
+        e.preventDefault();
+        this.setState({
+            counter: e.target.value,
+        })
+    }
     handleEstimateName(e) {
         e.preventDefault();
         this.setState({
@@ -109,6 +116,7 @@ class CalculateRepair extends Component {
     handleFullSubmission(e) {
         e.preventDefault();
         let repairData = {
+            counter: this.state.submissions.slice().length + 1,
             estimateName: this.state.estimateName,
             cost: parseFloat(this.state.cost).toFixed(2),
             materialCost: parseFloat(totalMaterialCost).toFixed(2),
@@ -125,19 +133,20 @@ class CalculateRepair extends Component {
 
     handleEdits(e) {
         e.preventDefault();
-        this.setState({
+        this.state.submissions[parseInt(this.state.counter) - 1] = {
+            counter: this.state.counter,
             estimateName: this.state.estimateName,
             cost: (parseFloat(totalMaterialCost) + parseFloat(totalLaborCost) + parseFloat(totalMiscCost)).toFixed(2),
             materialCost: parseFloat(totalMaterialCost).toFixed(2),
             laborCost: parseFloat(totalLaborCost).toFixed(2),
             miscCost: parseFloat(totalMiscCost).toFixed(2),
-        })
+        }
     }
 
     displaySubmissions() {
         const displaySubmissions = this.state.submissions.map((a, idx) => {
             return (
-                <NewRepair key={idx} estimateName={a.estimateName}
+                <NewRepair key={idx} counter={a.counter} estimateName={a.estimateName}
                     cost={a.cost} materialCost={a.materialCost}
                     laborCost={a.laborCost} miscCost={a.miscCost}
                 />
@@ -257,12 +266,20 @@ class CalculateRepair extends Component {
                                 <span className="subtitle" id="submitTotalCostEach4">Total Misc. Cost: </span>$
                                 <input type="number" value={parseFloat(totalMiscCost).toFixed(2)} onChange={this.handleMiscCostFinal.bind(this)}></input><br /><br />
 
-                                <input type="text" className="userInput" id="nameInput" placeholder="Estimate Cost Name" value={this.state.estimateName} onChange={this.handleEstimateName.bind(this)}></input><br /><br />
+                                <input type="text" className="userInput" id="nameInput" placeholder="Estimate Cost Name" onChange={this.handleEstimateName.bind(this)}></input><br /><br />
                                 <button id="submitButton">Submit</button>
                             </form>
                         </div>
                     </div>
                 </div>
+                <form onSubmit={this.handleEdits.bind(this)}>
+                    <input type="number" placeholder="Index Number" onChange={this.handleCounter.bind(this)}></input><br />
+                    <input type="text" className="userInput" id="nameInput" placeholder="Edit Repair Estimation Name" onChange={this.handleEstimateName.bind(this)}></input><br />
+                    <input type="number" placeholder="Edit Material Cost" onChange={this.handleMaterialCostFinal.bind(this)}></input><br />
+                    <input type="number" placeholder="Edit Labor Cost" onChange={this.handleLaborCostFinal.bind(this)}></input><br />
+                    <input type="number" placeholder="Edit Misc. Name" onChange={this.handleMiscCostFinal.bind(this)}></input><br />
+                    <button id="submitButton">Edit</button>
+                </form>
                 <div className="container">
                     <div className="section">
                         <div className="row columns is-multiline">

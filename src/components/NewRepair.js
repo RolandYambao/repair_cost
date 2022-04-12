@@ -36,6 +36,7 @@ class NewRepair extends Component {
             <div className="column is-4">
                 <div className="card large">
                     <article>
+                        <h1>{this.props.counter}</h1>
                         <h1 id="estimateName">{this.props.estimateName}</h1>
                         <p>Total Cost of Repair</p>
                         <h1 id="newAnswer">${this.props.cost}</h1>
