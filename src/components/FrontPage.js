@@ -25,17 +25,15 @@ const FrontPage = () => {
                 </div>
                 <div class="columns">
                     <div class="column is-3">
-                        <a href="/viewitems">
-                            <article>
-                                <figure class="image is-5by3">
-                                    <img src="https://i.imgur.com/qU8cLwQ.jpeg"
-                                        alt="Home Repair"
-                                        id="frontImage"
-                                    />
-                                </figure>
-                                <h2 class="subtitle">Home Repair</h2>
-                            </article>
-                        </a>
+                        <article>
+                            <figure class="image is-5by3">
+                                <img src="https://i.imgur.com/qU8cLwQ.jpeg"
+                                    alt="Home Repair"
+                                    id="frontImage"
+                                />
+                            </figure>
+                            <h2 class="subtitle">Home Repair</h2>
+                        </article>
                     </div>
 
                     <div class="column is-3">
