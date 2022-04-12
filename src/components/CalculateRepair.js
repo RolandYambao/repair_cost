@@ -229,7 +229,7 @@ class CalculateRepair extends Component {
                                     </figure>
                                     <br />
                                     <button className="controls" id="plus" onClick={this.handleAdditionMaterialSubmit.bind(this)}>+</button>
-                                    <input type="number" step=".01" min="0" className="controls" id="input" placeholder="0" value={this.state.materialCost} onChange={this.handleMaterialCost.bind(this)} />
+                                    <input type="number" step=".01" min="0" className="controls" id="input" placeholder="0" onChange={this.handleMaterialCost.bind(this)} />
                                     <button className="controls" id="minus" onClick={this.handleSubtractionMaterialSubmit.bind(this)}>-</button>
                                     <h2 className="subtitle" id="totalCostEach">Total Material Cost: ${parseFloat(totalMaterialCost).toFixed(2)}</h2>
                                 </article>
@@ -244,7 +244,7 @@ class CalculateRepair extends Component {
                                     </figure>
                                     <br />
                                     <button className="controls" id="plus" onClick={this.handleAdditionLaborSubmit.bind(this)}>+</button>
-                                    <input type="number" step=".01" min="0" className="controls" id="input" placeholder="0" value={this.state.laborCost} onChange={this.handleLaborCost.bind(this)} />
+                                    <input type="number" step=".01" min="0" className="controls" id="input" placeholder="0" onChange={this.handleLaborCost.bind(this)} />
                                     <button className="controls" id="minus" onClick={this.handleSubtractionLaborSubmit.bind(this)}>-</button>
                                     <h2 className="subtitle" id="totalCostEach">Total Labor Cost: ${parseFloat(totalLaborCost).toFixed(2)}</h2>
                                 </article>
@@ -259,7 +259,7 @@ class CalculateRepair extends Component {
                                     </figure>
                                     <br />
                                     <button className="controls" id="plus" onClick={this.handleAdditionMiscSubmit.bind(this)}>+</button>
-                                    <input type="number" step=".01" min="0" className="controls" id="input" placeholder="0" value={this.state.miscCost} onChange={this.handleMiscCost.bind(this)} />
+                                    <input type="number" step=".01" min="0" className="controls" id="input" placeholder="0" onChange={this.handleMiscCost.bind(this)} />
                                     <button className="controls" id="minus" onClick={this.handleSubtractionMiscSubmit.bind(this)}>-</button>
                                     <h2 className="subtitle" id="totalCostEach">Total Misc. Cost: ${parseFloat(totalMiscCost).toFixed(2)}</h2>
                                 </article>
