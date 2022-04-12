@@ -5,7 +5,7 @@ class DisplayRepair extends Component {
     render() {
         return (
             <div className="container">
-                <div id="greyTape">All Repair Estimations (Hard Coded Demo)</div>
+                <div id="greyTape">All Repair Estimations (Hard Coded Display)</div>
                 <div className="container">
                     <div className="section">
                         <div className="row columns is-multiline">
@@ -173,12 +173,14 @@ class DisplayRepair extends Component {
                             <div className="card large" id="dataBox">
                                 <form>
                                     <h1>With a Database Attached to this Frontend, your Submissions will appear here as well.</h1>
+                                    <br />
+                                    <h2 className="subtitle" id="totalCostEach">The Edit and Delete Feature does not Function in this Demo Display Page</h2>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         );
     }
 }
