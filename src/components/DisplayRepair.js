@@ -1,21 +1,9 @@
 import React, { Component } from 'react';
-import NewRepair from "./NewRepair";
 
 class DisplayRepair extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            submissions: [],
-        }
-    }
-
-    displaySubmissions() {
-        const displaySubmissions = this.state.submissions.map((a, idx) => {
-            return (
-                <NewRepair key={idx} />
-            )
-        })
     }
 
     render() {

@@ -1,6 +1,6 @@
 import './CalculateRepair.css';
 import React, { Component } from 'react';
-import DisplayRepair from './DisplayRepair';
+import NewRepair from "./NewRepair";
 
 let totalMaterialCost = 0;
 let totalLaborCost = 0;
@@ -15,6 +15,7 @@ class CalculateRepair extends Component {
             materialCost: 0,
             laborCost: 0,
             miscCost: 0,
+            submissions: [],
         }
     }
 
@@ -122,6 +123,14 @@ class CalculateRepair extends Component {
             miscCost: parseFloat(totalMiscCost).toFixed(2),
         }
         console.log(repairData);
+    }
+
+    displaySubmissions() {
+        const displaySubmissions = this.state.submissions.map((a, idx) => {
+            return (
+                <NewRepair key={idx} />
+            )
+        })
     }
 
     render() {
@@ -237,7 +246,8 @@ class CalculateRepair extends Component {
 
                                 <input type="text" className="userInput" id="nameInput" placeholder="Estimate Cost Name" value={this.state.estimateName} onChange={this.handleEstimateName.bind(this)}></input><br />
                                 <input type="file" className="userInput" id="pictureInput" value={this.state.estimatePicture} onChange={this.handleEstimatePicture.bind(this)} /><br />
-                                <button id="submitButton" href="/display">Submit</button>
+
+                                <button id="submitButton">Submit</button>
                             </form>
                         </div>
                     </div>
