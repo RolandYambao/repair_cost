@@ -237,7 +237,7 @@ class CalculateRepair extends Component {
 
                                 <input type="text" className="userInput" id="nameInput" placeholder="Estimate Cost Name" value={this.state.estimateName} onChange={this.handleEstimateName.bind(this)}></input><br />
                                 <input type="file" className="userInput" id="pictureInput" value={this.state.estimatePicture} onChange={this.handleEstimatePicture.bind(this)} /><br />
-                                <button id="submitButton">Submit</button>
+                                <button id="submitButton" href="/display">Submit</button>
                             </form>
                         </div>
                     </div>
