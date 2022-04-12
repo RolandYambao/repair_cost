@@ -240,3 +240,19 @@ h1 {
 #costPicture {
   image-rendering: optimizeQuality;
 }
+
+#newAnswer {
+  color: red;
+}
+
+#submitTotalCostEach2 {
+  margin-right: 9px;
+}
+
+#submitTotalCostEach3 {
+  margin-right: 28px;
+}
+
+#submitTotalCostEach4 {
+  margin-right: 32px;
+}

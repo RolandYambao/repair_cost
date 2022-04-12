@@ -234,19 +234,19 @@ class CalculateRepair extends Component {
                         <div className="card large" id="submitCard">
                             <form onSubmit={this.handleFullSubmission.bind(this)}>
                                 <h1>Submit Repair Estimate</h1>
-                                <span className="subtitle" id="totalCostEach" >Total Cost of Repair: $</span>
+                                <span className="subtitle" id="submitTotalCostEach1" >Total Cost of Repair: </span>$
                                 <input type="number" value={parseFloat(this.state.cost).toFixed(2)} onChange={this.handleTotalCost.bind(this)}></input><br /><br />
 
-                                <span className="subtitle" id="totalCostEach">Total Material Cost: $</span>
+                                <span className="subtitle" id="submitTotalCostEach2">Total Material Cost: </span>$
                                 <input type="number" value={parseFloat(totalMaterialCost).toFixed(2)} onChange={this.handleMaterialCostFinal.bind(this)}></input><br /><br />
 
-                                <span className="subtitle" id="totalCostEach">Total Labor Cost: $</span>
+                                <span className="subtitle" id="submitTotalCostEach3">Total Labor Cost: </span>$
                                 <input type="number" value={parseFloat(totalLaborCost).toFixed(2)} onChange={this.handleLaborCostFinal.bind(this)}></input><br /><br />
 
-                                <span className="subtitle" id="totalCostEach">Total Misc. Cost: $</span>
+                                <span className="subtitle" id="submitTotalCostEach4">Total Misc. Cost: </span>$
                                 <input type="number" value={parseFloat(totalMiscCost).toFixed(2)} onChange={this.handleMiscCostFinal.bind(this)}></input><br /><br />
 
-                                <input type="text" className="userInput" id="nameInput" placeholder="Estimate Cost Name" value={this.state.estimateName} onChange={this.handleEstimateName.bind(this)}></input><br />
+                                <input type="text" className="userInput" id="nameInput" placeholder="Estimate Cost Name" value={this.state.estimateName} onChange={this.handleEstimateName.bind(this)}></input><br /><br />
 
                                 <button id="submitButton">Submit</button>
                             </form>

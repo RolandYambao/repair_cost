@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 
 class NewRepair extends Component {
-
-    constructor(props) {
-        super(props);
-    }
-
+    
     render() {
         return (
             <div className="column is-4">

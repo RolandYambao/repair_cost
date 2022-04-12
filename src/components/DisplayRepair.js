@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
 
 class DisplayRepair extends Component {
-
-    constructor(props) {
-        super(props);
-    }
-
+    
     render() {
         return (
             <div className="container">
-                 <div id="greyTape">All Repair Estimations</div>
+                <div id="greyTape">All Repair Estimations</div>
                 <div className="section">
                     <div className="row columns is-multiline">
-                    <div className="column is-4">
+                        <div className="column is-4">
                             <div className="card large">
                                 <article>
                                     <h1>{this.props.estimateName}</h1>
