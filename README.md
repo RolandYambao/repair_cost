@@ -1,8 +1,8 @@
 # First Step
 
-Type in "npm install" before beginning
+Type in "npm install" in the terminal before beginning.
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
