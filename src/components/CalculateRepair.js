@@ -272,6 +272,8 @@ class CalculateRepair extends Component {
                         <div className="card large" id="submitCard">
                             <form onSubmit={this.handleFullSubmission.bind(this)}>
                                 <h1>Submit Repair Estimate</h1> <br />
+                                <input type="text" className="userInput" id="nameInputSubmit" placeholder="Broken Entity Name" onChange={this.handleEstimateName.bind(this)}></input><br /><br />
+
                                 <span className="subtitle" id="submitTotalCostEach1" >Total Cost of Repair: </span>$
                                 <input type="number" value={parseFloat(this.state.cost).toFixed(2)} onChange={this.handleTotalCost.bind(this)}></input><br /><br />
 
@@ -284,7 +286,6 @@ class CalculateRepair extends Component {
                                 <span className="subtitle" id="submitTotalCostEach4">Total Misc. Cost: </span>$
                                 <input type="number" value={parseFloat(totalMiscCost).toFixed(2)} onChange={this.handleMiscCostFinal.bind(this)}></input><br /><br />
 
-                                <input type="text" className="userInput" id="nameInput" placeholder="Broken Entity Name" onChange={this.handleEstimateName.bind(this)}></input><br /><br />
                                 <button id="submitButton">Submit</button>
                             </form>
                         </div>

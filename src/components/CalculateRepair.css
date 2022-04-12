@@ -264,3 +264,7 @@ h1 {
   padding-top: 50px;
   z-index: 0;
 }
+
+#nameInputSubmit {
+  width: 300px;
+}
