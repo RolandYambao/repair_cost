@@ -15,7 +15,7 @@ body {
     background-color: rgb(236, 236, 236);
 }
 
-#yellowTape {
+#greyTape {
     color: white;
     background-color: grey;
     border: 5px dashed black;

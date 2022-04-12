@@ -4,7 +4,7 @@ import React from 'react';
 const FrontPage = () => {
     return (
         <div className="container is-max-desktop">
-            <div id="yellowTape">Welcome!</div>
+            <div id="greyTape">Welcome!</div>
             <div id="about">
                 <h1>Greetings RepairCo LLC. clients we are dedicated to repairing any damages to your home and items for a fair price.
                     This application is to accurately estimate the damages in need of repairing to assist our field technicans.
