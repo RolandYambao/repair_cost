@@ -2,21 +2,21 @@ import React from 'react';
 
 const Navbar = (props) => {
     return (
-        <nav className="navbar" role="navigation" aria-label="main navigation">
-            <div className="container">
-                <div className="navbar-brand">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="container">
+                <div class="navbar-brand">
                 <img id="logo" src="https://i.imgur.com/uWvtR2H.png" alt="repairLogo" />
-                    <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                     </a>
                 </div>
-                <div id="navbarBasicExample" className="navbar-menu">
-                    <div className="navbar-end">
-                        <a className="navbar-item" href="/"> Home </a>
-                        <a className="navbar-item" href="/calculate"> Calculate Repair </a>
-                        <a className="navbar-item" href="/display"> All Repair Estimations </a>
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-end">
+                        <a class="navbar-item" href="/"> Home </a>
+                        <a class="navbar-item" href="/calculate"> Calculate Repair </a>
+                        <a class="navbar-item" href="/display"> All Repair Estimations </a>
                     </div>
                 </div>
             </div>
