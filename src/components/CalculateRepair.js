@@ -148,6 +148,15 @@ class CalculateRepair extends Component {
         console.log(this.state.submissions[parseInt(this.state.counter) - 1]);
     }
 
+    handleDelete(e) {
+        e.preventDefault();
+        this.state.submissions.splice(Number(this.state.counter) - 1, 1);
+        this.state.submissions[parseInt(this.state.counter) - 1].counter -= 1;
+        this.setState({
+            flow: +1,
+        })
+    }
+
     displaySubmissions() {
         const displaySubmissions = this.state.submissions.map((a, idx) => {
             return (
@@ -277,14 +286,36 @@ class CalculateRepair extends Component {
                         </div>
                     </div>
                 </div>
-                <form onSubmit={this.handleEdits.bind(this)}>
-                    <input type="number" placeholder="Index Number" onChange={this.handleCounter.bind(this)}></input><br />
-                    <input type="text" className="userInput" id="nameInput" placeholder="Edit Broken Entity Name" onChange={this.handleEstimateName.bind(this)}></input><br />
-                    <input type="number" placeholder="Edit Material Cost" onChange={this.handleMaterialCost.bind(this)}></input><br />
-                    <input type="number" placeholder="Edit Labor Cost" onChange={this.handleLaborCost.bind(this)}></input><br />
-                    <input type="number" placeholder="Edit Misc. Name" onChange={this.handleMiscCost.bind(this)}></input><br />
-                    <button id="submitButton">Edit</button>
-                </form>
+                <div className="container">
+                    <div className="section">
+                        <div className="row columns is-multiline">
+                            <div className="column is-half">
+                                <div className="card large" id="submitCard">
+                                    <h1>Edit Feature</h1>
+                                    <form onSubmit={this.handleEdits.bind(this)}>
+                                        <input type="number" placeholder="Index Number" onChange={this.handleCounter.bind(this)}></input><br />
+                                        <input type="text" className="userInput" id="nameInput" placeholder="Edit Broken Entity Name" onChange={this.handleEstimateName.bind(this)}></input><br />
+                                        <input type="number" placeholder="Edit Material Cost" onChange={this.handleMaterialCost.bind(this)}></input><br />
+                                        <input type="number" placeholder="Edit Labor Cost" onChange={this.handleLaborCost.bind(this)}></input><br />
+                                        <input type="number" placeholder="Edit Misc. Name" onChange={this.handleMiscCost.bind(this)}></input><br />
+                                        <button id="submitButton">Edit</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div className="column is-half">
+                                <div className="card large" id="submitCard">
+                                    <br /><br />
+                                    <h1>Delete Feature</h1>
+                                    <form onSubmit={this.handleDelete.bind(this)}>
+                                        <input type="number" placeholder="Index Number" onChange={this.handleCounter.bind(this)}></input><br />
+                                        <button id="submitButton">Delete</button>
+                                    </form>
+                                    <br /><br /><br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div className="container">
                     <div className="section">
                         <div className="row columns is-multiline">
