@@ -247,7 +247,6 @@ class CalculateRepair extends Component {
                                 <input type="number" value={parseFloat(totalMiscCost).toFixed(2)} onChange={this.handleMiscCostFinal.bind(this)}></input><br /><br />
 
                                 <input type="text" className="userInput" id="nameInput" placeholder="Estimate Cost Name" value={this.state.estimateName} onChange={this.handleEstimateName.bind(this)}></input><br /><br />
-
                                 <button id="submitButton">Submit</button>
                             </form>
                         </div>
@@ -260,7 +259,7 @@ class CalculateRepair extends Component {
                         </div>
                     </div>
                 </div>
-            </div >
+            </div>
         )
     }
 }
