@@ -3,12 +3,14 @@
     width: 49%;
     height: 450px;
     margin-right: 10px;
+    font-size: 25px;
 }
 
 #repairEstimateButton {
     margin: auto;
     width: 49%;
     height: 450px;
+    font-size: 25px;
 }
 
 body {
