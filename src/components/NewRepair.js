@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class NewRepair extends Component {
-    
+
     render() {
         return (
             <div className="column is-4">

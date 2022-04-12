@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class DisplayRepair extends Component {
-    
+
     render() {
         return (
             <div className="container">

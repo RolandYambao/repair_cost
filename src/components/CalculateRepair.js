@@ -233,7 +233,7 @@ class CalculateRepair extends Component {
                     <div className="column is-full">
                         <div className="card large" id="submitCard">
                             <form onSubmit={this.handleFullSubmission.bind(this)}>
-                                <h1>Submit Repair Estimate</h1>
+                                <h1>Submit Repair Estimate</h1> <br />
                                 <span className="subtitle" id="submitTotalCostEach1" >Total Cost of Repair: </span>$
                                 <input type="number" value={parseFloat(this.state.cost).toFixed(2)} onChange={this.handleTotalCost.bind(this)}></input><br /><br />
 

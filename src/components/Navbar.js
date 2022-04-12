@@ -16,7 +16,7 @@ const Navbar = (props) => {
                     <div class="navbar-end">
                         <a class="navbar-item" href="/"> Home </a>
                         <a class="navbar-item" href="/calculate"> Calculate Repair </a>
-                        <a class="navbar-item" href="/display"> All Repair Jobs </a>
+                        <a class="navbar-item" href="/display"> All Repair Estimations </a>
                     </div>
                 </div>
             </div>
