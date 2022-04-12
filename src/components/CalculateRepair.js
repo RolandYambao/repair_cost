@@ -114,7 +114,7 @@ class CalculateRepair extends Component {
 
     handleFullSubmission(e) {
         e.preventDefault();
-        const repairData = {
+        let repairData = {
             estimateName: this.state.estimateName,
             estimatePicture: this.state.estimatePicture,
             cost: parseFloat(this.state.cost).toFixed(2),
@@ -122,15 +122,25 @@ class CalculateRepair extends Component {
             laborCost: parseFloat(totalLaborCost).toFixed(2),
             miscCost: parseFloat(totalMiscCost).toFixed(2),
         }
+        const repairArray = this.state.submissions.slice();
+        repairArray.push(repairData);
+        this.setState({
+            submissions: repairArray,
+        })
         console.log(repairData);
     }
 
     displaySubmissions() {
         const displaySubmissions = this.state.submissions.map((a, idx) => {
             return (
-                <NewRepair key={idx} />
+                <NewRepair key={idx} estimateName={a.estimateName}
+                    estimatePicture={a.estimatePicture}
+                    cost={a.cost} materialCost={a.materialCost}
+                    laborCost={a.laborCost} miscCost={a.miscCost}
+                />
             )
-        })
+        });
+        return displaySubmissions;
     }
 
     render() {
@@ -252,7 +262,14 @@ class CalculateRepair extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+                <div className="container">
+                    <div className="section">
+                        <div className="row columns is-multiline">
+                            {this.displaySubmissions()}
+                        </div>
+                    </div>
+                </div>
+            </div >
         )
     }
 }
