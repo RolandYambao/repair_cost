@@ -17,6 +17,7 @@ class CalculateRepair extends Component {
             miscCost: 0,
             submissions: [],
             counter: 0,
+            flow: 0,
         }
     }
 
@@ -141,6 +142,10 @@ class CalculateRepair extends Component {
             laborCost: parseFloat(this.state.laborCost).toFixed(2),
             miscCost: parseFloat(this.state.miscCost).toFixed(2),
         }
+        this.setState({
+            flow: +1,
+        })
+        console.log(this.state.submissions[parseInt(this.state.counter) - 1]);
     }
 
     displaySubmissions() {
