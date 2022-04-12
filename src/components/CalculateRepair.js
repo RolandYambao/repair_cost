@@ -123,6 +123,17 @@ class CalculateRepair extends Component {
         console.log(repairData);
     }
 
+    handleEdits(e) {
+        e.preventDefault();
+        this.setState({
+            estimateName: this.state.estimateName,
+            cost: (parseFloat(totalMaterialCost) + parseFloat(totalLaborCost) + parseFloat(totalMiscCost)).toFixed(2),
+            materialCost: parseFloat(totalMaterialCost).toFixed(2),
+            laborCost: parseFloat(totalLaborCost).toFixed(2),
+            miscCost: parseFloat(totalMiscCost).toFixed(2),
+        })
+    }
+
     displaySubmissions() {
         const displaySubmissions = this.state.submissions.map((a, idx) => {
             return (
