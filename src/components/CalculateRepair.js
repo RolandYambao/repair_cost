@@ -297,7 +297,7 @@ class CalculateRepair extends Component {
                                         <input type="text" className="userInput" id="nameInput" placeholder="Edit Broken Entity Name" onChange={this.handleEstimateName.bind(this)}></input><br />
                                         <input type="number" placeholder="Edit Material Cost" onChange={this.handleMaterialCost.bind(this)}></input><br />
                                         <input type="number" placeholder="Edit Labor Cost" onChange={this.handleLaborCost.bind(this)}></input><br />
-                                        <input type="number" placeholder="Edit Misc. Name" onChange={this.handleMiscCost.bind(this)}></input><br />
+                                        <input type="number" placeholder="Edit Misc. Cost" onChange={this.handleMiscCost.bind(this)}></input><br />
                                         <button id="submitButton">Edit</button>
                                     </form>
                                 </div>

@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 
 class NewRepair extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     handleEstimateName(e) {
         e.preventDefault();
         this.setState({
@@ -34,8 +30,11 @@ class NewRepair extends Component {
     render() {
         return (
             <div className="column is-4">
-                <div className="card large">
-                    <article>
+                <figure>
+                    <img id="machineLogo" src="https://i.imgur.com/xQfwpjq.jpg" style={{ width: '125px', height: '125px' }} alt="RepairCoLogo" />
+                </figure>
+                <div className="card large" id="dataBox">
+                    <form>
                         <h1>{this.props.counter}</h1>
                         <h1 id="estimateName">{this.props.estimateName}</h1>
                         <p>Total Cost of Repair</p>
@@ -43,7 +42,7 @@ class NewRepair extends Component {
                         <h2 className="subtitle" id="totalCostEach">Total Material Cost: ${this.props.materialCost}</h2>
                         <h2 className="subtitle" id="totalCostEach">Total Labor Cost: ${this.props.laborCost}</h2>
                         <h2 className="subtitle" id="totalCostEach">Total Misc. Cost: ${this.props.miscCost}</h2>
-                    </article>
+                    </form>
                 </div>
             </div>
         );

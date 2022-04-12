@@ -45,11 +45,6 @@ hr {
   background-size: cover;
 }
 
-/* .hero .title {
-    color: rgb(255, 255, 255);
-    text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
-  } */
-
 .hero .input {
   width: 400px;
 }
@@ -255,4 +250,17 @@ h1 {
 
 #submitTotalCostEach4 {
   margin-right: 32px;
+}
+
+#machineLogo {
+  position: relative;
+  border: solid 5px white;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+#dataBox {
+  margin-top: -50px;
+  padding-top: 50px;
+  z-index: 0;
 }
