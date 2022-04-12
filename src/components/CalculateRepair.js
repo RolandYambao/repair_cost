@@ -81,12 +81,6 @@ class CalculateRepair extends Component {
             estimateName: e.target.value,
         })
     }
-    handleEstimatePicture(e) {
-        e.preventDefault();
-        this.setState({
-            estimatePicture: e.target.value,
-        })
-    }
     handleTotalCost(e) {
         e.preventDefault();
         this.setState({
@@ -116,7 +110,6 @@ class CalculateRepair extends Component {
         e.preventDefault();
         let repairData = {
             estimateName: this.state.estimateName,
-            estimatePicture: this.state.estimatePicture,
             cost: parseFloat(this.state.cost).toFixed(2),
             materialCost: parseFloat(totalMaterialCost).toFixed(2),
             laborCost: parseFloat(totalLaborCost).toFixed(2),
@@ -134,7 +127,6 @@ class CalculateRepair extends Component {
         const displaySubmissions = this.state.submissions.map((a, idx) => {
             return (
                 <NewRepair key={idx} estimateName={a.estimateName}
-                    estimatePicture={a.estimatePicture}
                     cost={a.cost} materialCost={a.materialCost}
                     laborCost={a.laborCost} miscCost={a.miscCost}
                 />
@@ -255,7 +247,6 @@ class CalculateRepair extends Component {
                                 <input type="number" value={parseFloat(totalMiscCost).toFixed(2)} onChange={this.handleMiscCostFinal.bind(this)}></input><br /><br />
 
                                 <input type="text" className="userInput" id="nameInput" placeholder="Estimate Cost Name" value={this.state.estimateName} onChange={this.handleEstimateName.bind(this)}></input><br />
-                                <input type="file" className="userInput" id="pictureInput" value={this.state.estimatePicture} onChange={this.handleEstimatePicture.bind(this)} /><br />
 
                                 <button id="submitButton">Submit</button>
                             </form>
