@@ -151,7 +151,9 @@ class CalculateRepair extends Component {
     handleDelete(e) {
         e.preventDefault();
         this.state.submissions.splice(Number(this.state.counter) - 1, 1);
-        this.state.submissions[parseInt(this.state.counter) - 1].counter -= 1;
+        for (let i = 0; i < this.state.submissions.length; i++) {
+            this.state.submissions[i].counter = i + 1;
+        }
         this.setState({
             flow: +1,
         })
