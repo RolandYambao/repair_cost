@@ -134,13 +134,15 @@ class CalculateRepair extends Component {
 
     handleEdits(e) {
         e.preventDefault();
-        this.state.submissions[parseInt(this.state.counter) - 1] = {
-            counter: this.state.counter,
-            estimateName: this.state.estimateName,
-            cost: (parseFloat(this.state.materialCost) + parseFloat(this.state.laborCost) + parseFloat(this.state.miscCost)).toFixed(2),
-            materialCost: parseFloat(this.state.materialCost).toFixed(2),
-            laborCost: parseFloat(this.state.laborCost).toFixed(2),
-            miscCost: parseFloat(this.state.miscCost).toFixed(2),
+        if (this.state.submissions.length > parseInt(this.state.counter) - 1) {
+            this.state.submissions[parseInt(this.state.counter) - 1] = {
+                counter: this.state.counter,
+                estimateName: this.state.estimateName,
+                cost: (parseFloat(this.state.materialCost) + parseFloat(this.state.laborCost) + parseFloat(this.state.miscCost)).toFixed(2),
+                materialCost: parseFloat(this.state.materialCost).toFixed(2),
+                laborCost: parseFloat(this.state.laborCost).toFixed(2),
+                miscCost: parseFloat(this.state.miscCost).toFixed(2),
+            }
         }
         this.setState({
             flow: +1,
