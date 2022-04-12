@@ -136,10 +136,10 @@ class CalculateRepair extends Component {
         this.state.submissions[parseInt(this.state.counter) - 1] = {
             counter: this.state.counter,
             estimateName: this.state.estimateName,
-            cost: (parseFloat(totalMaterialCost) + parseFloat(totalLaborCost) + parseFloat(totalMiscCost)).toFixed(2),
-            materialCost: parseFloat(totalMaterialCost).toFixed(2),
-            laborCost: parseFloat(totalLaborCost).toFixed(2),
-            miscCost: parseFloat(totalMiscCost).toFixed(2),
+            cost: (parseFloat(this.state.materialCost) + parseFloat(this.state.laborCost) + parseFloat(this.state.miscCost)).toFixed(2),
+            materialCost: parseFloat(this.state.materialCost).toFixed(2),
+            laborCost: parseFloat(this.state.laborCost).toFixed(2),
+            miscCost: parseFloat(this.state.miscCost).toFixed(2),
         }
     }
 
@@ -266,7 +266,7 @@ class CalculateRepair extends Component {
                                 <span className="subtitle" id="submitTotalCostEach4">Total Misc. Cost: </span>$
                                 <input type="number" value={parseFloat(totalMiscCost).toFixed(2)} onChange={this.handleMiscCostFinal.bind(this)}></input><br /><br />
 
-                                <input type="text" className="userInput" id="nameInput" placeholder="Estimate Cost Name" onChange={this.handleEstimateName.bind(this)}></input><br /><br />
+                                <input type="text" className="userInput" id="nameInput" placeholder="Repair Estimation Name" onChange={this.handleEstimateName.bind(this)}></input><br /><br />
                                 <button id="submitButton">Submit</button>
                             </form>
                         </div>
@@ -275,9 +275,9 @@ class CalculateRepair extends Component {
                 <form onSubmit={this.handleEdits.bind(this)}>
                     <input type="number" placeholder="Index Number" onChange={this.handleCounter.bind(this)}></input><br />
                     <input type="text" className="userInput" id="nameInput" placeholder="Edit Repair Estimation Name" onChange={this.handleEstimateName.bind(this)}></input><br />
-                    <input type="number" placeholder="Edit Material Cost" onChange={this.handleMaterialCostFinal.bind(this)}></input><br />
-                    <input type="number" placeholder="Edit Labor Cost" onChange={this.handleLaborCostFinal.bind(this)}></input><br />
-                    <input type="number" placeholder="Edit Misc. Name" onChange={this.handleMiscCostFinal.bind(this)}></input><br />
+                    <input type="number" placeholder="Edit Material Cost" onChange={this.handleMaterialCost.bind(this)}></input><br />
+                    <input type="number" placeholder="Edit Labor Cost" onChange={this.handleLaborCost.bind(this)}></input><br />
+                    <input type="number" placeholder="Edit Misc. Name" onChange={this.handleMiscCost.bind(this)}></input><br />
                     <button id="submitButton">Edit</button>
                 </form>
                 <div className="container">
