@@ -131,7 +131,6 @@ class CalculateRepair extends Component {
         })
         console.log(repairData);
     }
-
     handleEdits(e) {
         e.preventDefault();
         if (this.state.submissions.length > parseInt(this.state.counter) - 1) {
